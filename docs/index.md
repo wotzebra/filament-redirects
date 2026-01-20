@@ -7,7 +7,7 @@ This package allows you to add redirects via Filament manually or with an import
 You can install the package via composer:
 
 ```bash
-composer require codedor/filament-redirects
+composer require wotz/filament-redirects
 ```
 
 You can publish and run the migrations with:
@@ -41,7 +41,7 @@ To make the redirects work, you have to register the Redirects middleware
 
 protected $middleware = [
     // ...
-    \Codedor\FilamentRedirects\Http\Middleware\Redirects::class,
+    \Wotz\FilamentRedirects\Http\Middleware\Redirects::class,
 ];
 ```
 
@@ -52,7 +52,7 @@ public function panel(Panel $panel): Panel
 {
     return $panel
         ->plugins([
-            \Codedor\FilamentRedirects\Filament\RedirectsPlugin::make(),
+            \Wotz\FilamentRedirects\Filament\RedirectsPlugin::make(),
         ]);
     }
 

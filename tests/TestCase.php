@@ -1,16 +1,15 @@
 <?php
 
-namespace Codedor\FilamentRedirects\Tests;
+namespace Wotz\FilamentRedirects\Tests;
 
 use BladeUI\Heroicons\BladeHeroiconsServiceProvider;
 use BladeUI\Icons\BladeIconsServiceProvider;
-use Codedor\FilamentRedirects\Filament\RedirectsPlugin;
-use Codedor\FilamentRedirects\Providers\FilamentRedirectsServiceProvider;
 use Filament\Actions\ActionsServiceProvider;
 use Filament\FilamentServiceProvider;
-use Filament\FilamentServiceProvider as BaseFilamentServiceProvider;
 use Filament\Forms\FormsServiceProvider;
+use Filament\Infolists\InfolistsServiceProvider;
 use Filament\Notifications\NotificationsServiceProvider;
+use Filament\Schemas\SchemasServiceProvider;
 use Filament\Support\SupportServiceProvider;
 use Filament\Tables\TablesServiceProvider;
 use Filament\Widgets\WidgetsServiceProvider;
@@ -19,6 +18,8 @@ use Livewire\LivewireServiceProvider;
 use Maatwebsite\Excel\ExcelServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 use RyanChandler\BladeCaptureDirective\BladeCaptureDirectiveServiceProvider;
+use Wotz\FilamentRedirects\Filament\RedirectsPlugin;
+use Wotz\FilamentRedirects\Providers\FilamentRedirectsServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -27,29 +28,34 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'Codedor\\FilamentRedirects\\Database\\Factories\\' . class_basename($modelName) . 'Factory'
+            fn (string $modelName) => 'Wotz\\FilamentRedirects\\Database\\Factories\\' . class_basename($modelName) . 'Factory'
         );
     }
 
     protected function getPackageProviders($app)
     {
-        return [
-            FilamentRedirectsServiceProvider::class,
+        $providers = [
             LivewireServiceProvider::class,
-            FilamentServiceProvider::class,
+            ActionsServiceProvider::class,
             BladeCaptureDirectiveServiceProvider::class,
             BladeHeroiconsServiceProvider::class,
             BladeIconsServiceProvider::class,
-            BaseFilamentServiceProvider::class,
+            FilamentServiceProvider::class,
+            FilamentRedirectsServiceProvider::class,
             FormsServiceProvider::class,
-            ActionsServiceProvider::class,
-            WidgetsServiceProvider::class,
-            LivewireServiceProvider::class,
+            InfolistsServiceProvider::class,
             NotificationsServiceProvider::class,
+            SchemasServiceProvider::class,
             SupportServiceProvider::class,
             TablesServiceProvider::class,
+            WidgetsServiceProvider::class,
+            LivewireServiceProvider::class,
             ExcelServiceProvider::class,
         ];
+
+        asort($providers);
+
+        return $providers;
     }
 
     public function getEnvironmentSetUp($app)

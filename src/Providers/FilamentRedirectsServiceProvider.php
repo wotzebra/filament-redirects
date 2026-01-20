@@ -1,11 +1,11 @@
 <?php
 
-namespace Codedor\FilamentRedirects\Providers;
+namespace Wotz\FilamentRedirects\Providers;
 
-use Codedor\FilamentRedirects\Models\Redirect;
-use Codedor\FilamentRedirects\Observers\RedirectObserver;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
+use Wotz\FilamentRedirects\Models\Redirect;
+use Wotz\FilamentRedirects\Observers\RedirectObserver;
 
 class FilamentRedirectsServiceProvider extends PackageServiceProvider
 {

@@ -7,7 +7,7 @@ This package allows you to add redirects via Filament manually or with an import
 You can install the package via composer:
 
 ```bash
-composer require codedor/filament-redirects
+composer require wotz/filament-redirects
 ```
 
 You can publish and run the migrations with:
@@ -56,7 +56,7 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## Security Vulnerabilities
 
-If you discover any security-related issues, please email info@codedor.be instead of using the issue tracker.
+If you discover any security-related issues, please email info@whoownsthezebra.be instead of using the issue tracker.
 
 ## License
 

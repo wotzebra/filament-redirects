@@ -1,9 +1,9 @@
 <?php
 
-namespace Codedor\FilamentRedirects\Observers;
+namespace Wotz\FilamentRedirects\Observers;
 
-use Codedor\FilamentRedirects\Models\Redirect;
 use Illuminate\Support\Facades\Cache;
+use Wotz\FilamentRedirects\Models\Redirect;
 
 class RedirectObserver
 {

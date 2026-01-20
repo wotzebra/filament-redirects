@@ -1,9 +1,7 @@
 <?php
 
-namespace Codedor\FilamentRedirects\Filament\RedirectResource\Pages;
+namespace Wotz\FilamentRedirects\Filament\RedirectResource\Pages;
 
-use Codedor\FilamentRedirects\Filament\RedirectResource;
-use Codedor\FilamentRedirects\Imports\RedirectsImport;
 use Filament\Actions;
 use Filament\Actions\Action;
 use Filament\Forms\Components\FileUpload;
@@ -12,6 +10,8 @@ use Filament\Resources\Pages\ManageRecords;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
 use Maatwebsite\Excel\Facades\Excel;
+use Wotz\FilamentRedirects\Filament\RedirectResource;
+use Wotz\FilamentRedirects\Imports\RedirectsImport;
 
 class ManageRedirects extends ManageRecords
 {
@@ -26,7 +26,7 @@ class ManageRedirects extends ManageRecords
                 ->icon('heroicon-o-arrow-up-on-square')
                 ->action(fn (array $data) => $this->importRedirects($data))
                 ->visible(fn (): bool => RedirectResource::canCreate())
-                ->form([
+                ->schema([
                     FileUpload::make('file')
                         ->label(__('filament-redirects::admin.file'))
                         ->disk('local'),
