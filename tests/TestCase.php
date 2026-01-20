@@ -4,8 +4,6 @@ namespace Wotz\FilamentRedirects\Tests;
 
 use BladeUI\Heroicons\BladeHeroiconsServiceProvider;
 use BladeUI\Icons\BladeIconsServiceProvider;
-use Wotz\FilamentRedirects\Filament\RedirectsPlugin;
-use Wotz\FilamentRedirects\Providers\FilamentRedirectsServiceProvider;
 use Filament\Actions\ActionsServiceProvider;
 use Filament\FilamentServiceProvider;
 use Filament\Forms\FormsServiceProvider;
@@ -20,6 +18,8 @@ use Livewire\LivewireServiceProvider;
 use Maatwebsite\Excel\ExcelServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 use RyanChandler\BladeCaptureDirective\BladeCaptureDirectiveServiceProvider;
+use Wotz\FilamentRedirects\Filament\RedirectsPlugin;
+use Wotz\FilamentRedirects\Providers\FilamentRedirectsServiceProvider;
 
 class TestCase extends Orchestra
 {

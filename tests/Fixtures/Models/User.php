@@ -2,11 +2,11 @@
 
 namespace Wotz\FilamentRedirects\Tests\Fixtures\Models;
 
-use Wotz\FilamentRedirects\Tests\Fixtures\Database\Factories\UserFactory;
 use Filament\Models\Contracts\FilamentUser;
 use Filament\Panel;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Wotz\FilamentRedirects\Tests\Fixtures\Database\Factories\UserFactory;
 
 class User extends Authenticatable implements FilamentUser
 {

@@ -3,10 +3,10 @@
 namespace Wotz\FilamentRedirects\Http\Middleware;
 
 use Closure;
-use Wotz\FilamentRedirects\Models\Redirect;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Str;
+use Wotz\FilamentRedirects\Models\Redirect;
 
 class Redirects
 {

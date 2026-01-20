@@ -2,8 +2,8 @@
 
 namespace Wotz\FilamentRedirects\Observers;
 
-use Wotz\FilamentRedirects\Models\Redirect;
 use Illuminate\Support\Facades\Cache;
+use Wotz\FilamentRedirects\Models\Redirect;
 
 class RedirectObserver
 {

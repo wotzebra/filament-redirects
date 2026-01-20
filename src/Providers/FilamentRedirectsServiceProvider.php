@@ -2,10 +2,10 @@
 
 namespace Wotz\FilamentRedirects\Providers;
 
-use Wotz\FilamentRedirects\Models\Redirect;
-use Wotz\FilamentRedirects\Observers\RedirectObserver;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
+use Wotz\FilamentRedirects\Models\Redirect;
+use Wotz\FilamentRedirects\Observers\RedirectObserver;
 
 class FilamentRedirectsServiceProvider extends PackageServiceProvider
 {

@@ -1,12 +1,12 @@
 <?php
 
-use Wotz\FilamentRedirects\Filament\RedirectResource\Pages\ManageRedirects;
-use Wotz\FilamentRedirects\Http\Middleware\Redirects;
-use Wotz\FilamentRedirects\Models\Redirect;
 use Filament\Notifications\Notification;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Livewire\Livewire;
+use Wotz\FilamentRedirects\Filament\RedirectResource\Pages\ManageRedirects;
+use Wotz\FilamentRedirects\Http\Middleware\Redirects;
+use Wotz\FilamentRedirects\Models\Redirect;
 
 beforeEach(function () {
     $this->redirects = Redirect::factory()->createMany([

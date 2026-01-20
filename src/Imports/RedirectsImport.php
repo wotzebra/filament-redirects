@@ -2,12 +2,12 @@
 
 namespace Wotz\FilamentRedirects\Imports;
 
-use Wotz\FilamentRedirects\Models\Redirect;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
 use Maatwebsite\Excel\Concerns\ToCollection;
 use Maatwebsite\Excel\Concerns\WithBatchInserts;
 use Maatwebsite\Excel\Concerns\WithHeadingRow;
+use Wotz\FilamentRedirects\Models\Redirect;
 
 class RedirectsImport implements ToCollection, WithBatchInserts, WithHeadingRow
 {
