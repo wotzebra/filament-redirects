@@ -1,7 +1,7 @@
 <?php
 
-use Codedor\FilamentRedirects\Models\Redirect;
 use Symfony\Component\HttpKernel\Exception\HttpException;
+use Wotz\FilamentRedirects\Models\Redirect;
 
 it('will skip if it is a post request', function () {
     $response = createResponse('/from', 'POST');

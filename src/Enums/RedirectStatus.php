@@ -1,6 +1,6 @@
 <?php
 
-namespace Codedor\FilamentRedirects\Enums;
+namespace Wotz\FilamentRedirects\Enums;
 
 use Filament\Support\Contracts\HasLabel;
 

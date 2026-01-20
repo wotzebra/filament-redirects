@@ -1,9 +1,7 @@
 <?php
 
-namespace Codedor\FilamentRedirects\Filament\RedirectResource\Pages;
+namespace Wotz\FilamentRedirects\Filament\RedirectResource\Pages;
 
-use Codedor\FilamentRedirects\Filament\RedirectResource;
-use Codedor\FilamentRedirects\Imports\RedirectsImport;
 use Filament\Actions;
 use Filament\Actions\Action;
 use Filament\Forms\Components\FileUpload;
@@ -12,6 +10,8 @@ use Filament\Resources\Pages\ManageRecords;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
 use Maatwebsite\Excel\Facades\Excel;
+use Wotz\FilamentRedirects\Filament\RedirectResource;
+use Wotz\FilamentRedirects\Imports\RedirectsImport;
 
 class ManageRedirects extends ManageRecords
 {

@@ -1,19 +1,19 @@
 <?php
 
-namespace Codedor\FilamentRedirects\Filament;
+namespace Wotz\FilamentRedirects\Filament;
 
-use Codedor\FilamentRedirects\Enums\RedirectStatus;
-use Codedor\FilamentRedirects\Filament\RedirectResource\Pages\ManageRedirects;
 use Filament\Forms;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Str;
+use Wotz\FilamentRedirects\Enums\RedirectStatus;
+use Wotz\FilamentRedirects\Filament\RedirectResource\Pages\ManageRedirects;
 
 class RedirectResource extends Resource
 {
-    protected static ?string $model = \Codedor\FilamentRedirects\Models\Redirect::class;
+    protected static ?string $model = \Wotz\FilamentRedirects\Models\Redirect::class;
 
     protected static string|\UnitEnum|null $navigationGroup = 'SEO';
 

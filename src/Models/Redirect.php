@@ -1,14 +1,14 @@
 <?php
 
-namespace Codedor\FilamentRedirects\Models;
+namespace Wotz\FilamentRedirects\Models;
 
-use Codedor\FilamentRedirects\Database\Factories\RedirectFactory;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 use Spatie\EloquentSortable\Sortable;
 use Spatie\EloquentSortable\SortableTrait;
+use Wotz\FilamentRedirects\Database\Factories\RedirectFactory;
 
 /**
  * @property string $from

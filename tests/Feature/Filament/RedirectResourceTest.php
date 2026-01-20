@@ -1,8 +1,8 @@
 <?php
 
-use Codedor\FilamentRedirects\Filament\RedirectResource;
-use Codedor\FilamentRedirects\Models\Redirect;
-use Codedor\FilamentRedirects\Tests\Fixtures\Models\User;
+use Wotz\FilamentRedirects\Filament\RedirectResource;
+use Wotz\FilamentRedirects\Models\Redirect;
+use Wotz\FilamentRedirects\Tests\Fixtures\Models\User;
 
 beforeEach(function () {
     Redirect::factory()->create();

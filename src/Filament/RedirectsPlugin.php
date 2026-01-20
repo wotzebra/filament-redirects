@@ -1,6 +1,6 @@
 <?php
 
-namespace Codedor\FilamentRedirects\Filament;
+namespace Wotz\FilamentRedirects\Filament;
 
 use Filament\Contracts\Plugin;
 use Filament\Panel;
