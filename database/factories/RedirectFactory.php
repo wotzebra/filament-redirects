@@ -1,8 +1,8 @@
 <?php
 
-namespace Codedor\FilamentRedirects\Database\Factories;
+namespace Wotz\FilamentRedirects\Database\Factories;
 
-use Codedor\FilamentRedirects\Models\Redirect;
+use Wotz\FilamentRedirects\Models\Redirect;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class RedirectFactory extends Factory

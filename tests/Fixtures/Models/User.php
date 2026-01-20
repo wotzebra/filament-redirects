@@ -1,8 +1,8 @@
 <?php
 
-namespace Codedor\FilamentRedirects\Tests\Fixtures\Models;
+namespace Wotz\FilamentRedirects\Tests\Fixtures\Models;
 
-use Codedor\FilamentRedirects\Tests\Fixtures\Database\Factories\UserFactory;
+use Wotz\FilamentRedirects\Tests\Fixtures\Database\Factories\UserFactory;
 use Filament\Models\Contracts\FilamentUser;
 use Filament\Panel;
 use Illuminate\Database\Eloquent\Factories\HasFactory;

@@ -1,8 +1,8 @@
 <?php
 
-namespace Codedor\FilamentRedirects\Tests\Fixtures\Database\Factories;
+namespace Wotz\FilamentRedirects\Tests\Fixtures\Database\Factories;
 
-use Codedor\FilamentRedirects\Tests\Fixtures\Models\User;
+use Wotz\FilamentRedirects\Tests\Fixtures\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 

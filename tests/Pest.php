@@ -1,7 +1,7 @@
 <?php
 
-use Codedor\FilamentRedirects\Http\Middleware\Redirects;
-use Codedor\FilamentRedirects\Tests\TestCase;
+use Wotz\FilamentRedirects\Http\Middleware\Redirects;
+use Wotz\FilamentRedirects\Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Http\Request;
 

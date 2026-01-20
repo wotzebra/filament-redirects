@@ -1,8 +1,8 @@
 <?php
 
-use Codedor\FilamentRedirects\Filament\RedirectResource\Pages\ManageRedirects;
-use Codedor\FilamentRedirects\Http\Middleware\Redirects;
-use Codedor\FilamentRedirects\Models\Redirect;
+use Wotz\FilamentRedirects\Filament\RedirectResource\Pages\ManageRedirects;
+use Wotz\FilamentRedirects\Http\Middleware\Redirects;
+use Wotz\FilamentRedirects\Models\Redirect;
 use Filament\Notifications\Notification;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -20,7 +20,7 @@ beforeEach(function () {
         ],
     ]);
 
-    $this->actingAs(\Codedor\FilamentRedirects\Tests\Fixtures\Models\User::factory()->create());
+    $this->actingAs(\Wotz\FilamentRedirects\Tests\Fixtures\Models\User::factory()->create());
 });
 
 it('can list redirects', function () {

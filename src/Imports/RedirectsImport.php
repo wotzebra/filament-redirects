@@ -1,8 +1,8 @@
 <?php
 
-namespace Codedor\FilamentRedirects\Imports;
+namespace Wotz\FilamentRedirects\Imports;
 
-use Codedor\FilamentRedirects\Models\Redirect;
+use Wotz\FilamentRedirects\Models\Redirect;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
 use Maatwebsite\Excel\Concerns\ToCollection;
