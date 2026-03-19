@@ -1,13 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Cache;
+use Wotz\FilamentRedirects\Models\Redirect;
 
 it('clears cache when creating a redirect', function () {
     Cache::shouldReceive('forget')
         ->with('redirects')
         ->once();
 
-    \Wotz\FilamentRedirects\Models\Redirect::factory()->create();
+    Redirect::factory()->create();
 });
 
 it('clears cache when updating a redirect', function () {
@@ -15,7 +16,7 @@ it('clears cache when updating a redirect', function () {
         ->with('redirects')
         ->twice();
 
-    $redirect = \Wotz\FilamentRedirects\Models\Redirect::factory()->create();
+    $redirect = Redirect::factory()->create();
 
     $redirect->from = '/new';
     $redirect->save();
@@ -26,7 +27,7 @@ it('clears cache when deleting a redirect', function () {
         ->with('redirects')
         ->twice();
 
-    $redirect = \Wotz\FilamentRedirects\Models\Redirect::factory()->create();
+    $redirect = Redirect::factory()->create();
 
     $redirect->delete();
 });

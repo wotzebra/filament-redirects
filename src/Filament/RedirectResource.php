@@ -2,24 +2,30 @@
 
 namespace Wotz\FilamentRedirects\Filament;
 
+use Filament\Actions\BulkActionGroup;
+use Filament\Actions\DeleteAction;
+use Filament\Actions\DeleteBulkAction;
+use Filament\Actions\EditAction;
 use Filament\Forms;
 use Filament\Resources\Resource;
+use Filament\Schemas\Schema;
 use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Str;
 use Wotz\FilamentRedirects\Enums\RedirectStatus;
 use Wotz\FilamentRedirects\Filament\RedirectResource\Pages\ManageRedirects;
+use Wotz\FilamentRedirects\Models\Redirect;
 
 class RedirectResource extends Resource
 {
-    protected static ?string $model = \Wotz\FilamentRedirects\Models\Redirect::class;
+    protected static ?string $model = Redirect::class;
 
     protected static string|\UnitEnum|null $navigationGroup = 'SEO';
 
     protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-globe-alt';
 
-    public static function form(\Filament\Schemas\Schema $schema): \Filament\Schemas\Schema
+    public static function form(Schema $schema): Schema
     {
         return $schema
             ->components([
@@ -71,12 +77,12 @@ class RedirectResource extends Resource
                 //
             ])
             ->actions([
-                \Filament\Actions\EditAction::make(),
-                \Filament\Actions\DeleteAction::make(),
+                EditAction::make(),
+                DeleteAction::make(),
             ])
             ->bulkActions([
-                \Filament\Actions\BulkActionGroup::make([
-                    \Filament\Actions\DeleteBulkAction::make(),
+                BulkActionGroup::make([
+                    DeleteBulkAction::make(),
                 ]),
             ])
             ->reorderable('sort_order');

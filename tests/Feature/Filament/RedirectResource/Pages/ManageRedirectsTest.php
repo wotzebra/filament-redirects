@@ -7,6 +7,7 @@ use Livewire\Livewire;
 use Wotz\FilamentRedirects\Filament\RedirectResource\Pages\ManageRedirects;
 use Wotz\FilamentRedirects\Http\Middleware\Redirects;
 use Wotz\FilamentRedirects\Models\Redirect;
+use Wotz\FilamentRedirects\Tests\Fixtures\Models\User;
 
 beforeEach(function () {
     $this->redirects = Redirect::factory()->createMany([
@@ -20,7 +21,7 @@ beforeEach(function () {
         ],
     ]);
 
-    $this->actingAs(\Wotz\FilamentRedirects\Tests\Fixtures\Models\User::factory()->create());
+    $this->actingAs(User::factory()->create());
 });
 
 it('can list redirects', function () {
