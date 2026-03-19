@@ -19,7 +19,6 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 use Livewire\LivewireServiceProvider;
 use Maatwebsite\Excel\ExcelServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
-use RyanChandler\BladeCaptureDirective\BladeCaptureDirectiveServiceProvider;
 use Wotz\FilamentRedirects\Filament\RedirectsPlugin;
 use Wotz\FilamentRedirects\Providers\FilamentRedirectsServiceProvider;
 
@@ -39,7 +38,6 @@ class TestCase extends Orchestra
         $providers = [
             LivewireServiceProvider::class,
             ActionsServiceProvider::class,
-            BladeCaptureDirectiveServiceProvider::class,
             BladeHeroiconsServiceProvider::class,
             BladeIconsServiceProvider::class,
             FilamentServiceProvider::class,
