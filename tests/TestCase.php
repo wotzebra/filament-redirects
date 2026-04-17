@@ -5,10 +5,12 @@ namespace Wotz\FilamentRedirects\Tests;
 use BladeUI\Heroicons\BladeHeroiconsServiceProvider;
 use BladeUI\Icons\BladeIconsServiceProvider;
 use Filament\Actions\ActionsServiceProvider;
+use Filament\Facades\Filament;
 use Filament\FilamentServiceProvider;
 use Filament\Forms\FormsServiceProvider;
 use Filament\Infolists\InfolistsServiceProvider;
 use Filament\Notifications\NotificationsServiceProvider;
+use Filament\Panel;
 use Filament\Schemas\SchemasServiceProvider;
 use Filament\Support\SupportServiceProvider;
 use Filament\Tables\TablesServiceProvider;
@@ -17,7 +19,6 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 use Livewire\LivewireServiceProvider;
 use Maatwebsite\Excel\ExcelServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
-use RyanChandler\BladeCaptureDirective\BladeCaptureDirectiveServiceProvider;
 use Wotz\FilamentRedirects\Filament\RedirectsPlugin;
 use Wotz\FilamentRedirects\Providers\FilamentRedirectsServiceProvider;
 
@@ -37,7 +38,6 @@ class TestCase extends Orchestra
         $providers = [
             LivewireServiceProvider::class,
             ActionsServiceProvider::class,
-            BladeCaptureDirectiveServiceProvider::class,
             BladeHeroiconsServiceProvider::class,
             BladeIconsServiceProvider::class,
             FilamentServiceProvider::class,
@@ -69,13 +69,13 @@ class TestCase extends Orchestra
             'prefix' => '',
         ]);
 
-        $panel = new \Filament\Panel;
+        $panel = new Panel;
         $panel
             ->id('resource-test')
             ->default(true)
             ->plugin(RedirectsPlugin::make());
 
-        \Filament\Facades\Filament::registerPanel($panel);
+        Filament::registerPanel($panel);
     }
 
     protected function defineDatabaseMigrations(): void
