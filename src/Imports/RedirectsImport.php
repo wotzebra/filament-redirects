@@ -18,9 +18,9 @@ class RedirectsImport implements ToCollection, WithBatchInserts, WithHeadingRow
         $this->defaultStatus = config('filament-redirects.default-status');
     }
 
-    public function collection(Collection $rows)
+    public function collection(Collection $collection): void
     {
-        $rows->each(function ($row) {
+        $collection->each(function ($row) {
             if ($row->has('from') && ($row['from'] !== null)) {
                 $from = $this->removeTrailingSlashes($row['from']);
                 $to = $this->removeTrailingSlashes($row['to']);
